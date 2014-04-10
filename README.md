@@ -31,11 +31,11 @@ Dump all data directly to `db/seeds.rb`:
 
 Result:
 
-    Product.create!([
+    Product.import([
       {category_id: 1, description: "Long Sleeve Shirt", name: "Long Sleeve Shirt"},
       {category_id: 3, description: "Plain White Tee Shirt", name: "Plain T-Shirt"}
     ])
-    User.create!([
+    User.import([
       {id: 1, password: "123456", username: "test_1"},
       {id: 2, password: "234567", username: "test_2"}
     ])
@@ -46,7 +46,7 @@ Dump only data from the users table and dump a maximum of 1 record:
 
 Result:
 
-    User.create!([
+    User.import([
       {id: 1, password: "123456", username: "test_1"}
     ])
 
@@ -65,7 +65,7 @@ There are more options that can be set— see below for all of them.
 Output a dump of all User records:
 
     irb(main):001:0> puts SeedDump.dump(User)
-    User.create!([
+    User.import([
       {id: 1, password: "123456", username: "test_1"},
       {id: 2, password: "234567", username: "test_2"}
     ])

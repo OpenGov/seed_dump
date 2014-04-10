@@ -81,8 +81,8 @@ module Helpers
   def load_sample_data
     Rails.application.eager_load!
 
-    Sample.create!
+    Sample.import
 
-    ChildSample.create!
+    ChildSample.import
   end
 end
