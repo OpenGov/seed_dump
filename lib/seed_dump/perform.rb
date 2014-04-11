@@ -33,7 +33,7 @@ module SeedDump
       @opts['models']  = @opts['models'].split(',').collect {|x| x.underscore.singularize.camelize }
       @opts['schema']  = env['PG_SCHEMA']
       @opts['model_dir']  = env['MODEL_DIR'] || @model_dir
-      @opts['create_method']  = env['CREATE_METHOD'] || 'create'
+      @opts['create_method']  = env['CREATE_METHOD'] || 'import'
     end
 
     def loadModels
